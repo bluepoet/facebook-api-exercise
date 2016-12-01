@@ -1,0 +1,17 @@
+<html>
+<head>
+    <title>Hello Facebook</title>
+</head>
+<body>
+<h3>Hello, <span th:text="${facebookProfile.name}">Some User</span>!</h3>
+
+<h4>Here is your feed:</h4>
+
+<div th:each="post:${posts}">
+    <b th:text="${post.createdTime}">createdTime</b> wrote:
+    <p th:text="${post.message}">message</p>
+    <p th:text="${post.description}">description</p>
+    <hr/>
+</div>
+</body>
+</html>
